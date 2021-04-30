@@ -21,10 +21,14 @@ To create a neural net, a list of `layer` and a `lossLayer` is required. These a
 ```python
 from neuralnet import *
 
-denseLayer = Dense(None, 16, 8)
-sigmoid = Sigmoid()
+denseLayer1 = Dense(None, 16, 8)
+sigmoid1 = Sigmoid()
+denseLayer2 = Dense(None, 8, 4)
+sigmoid2 = Sigmoid()
+denseLayer3 = Dense(None, 4, 2)
+
 lossLayer = CategoricalCrossEntropy()
-neuralNet = NeuralNet([denseLayer, sigmoid], lossLayer)
+neuralNet = NeuralNet([denseLayer1, sigmoid1, denseLayer2, sigmoid2, denseLayer3], lossLayer)
 ```
 
 The order of the layer in the list is important! For normal a activation layer (sigmoid, tanh) should follow a normal, dense layer. As you can see, the Dense Layer takes three parameters. The second one describes the number of input neurons (16), while the third one describes the number of output neurons (8). The corresponding weights are set randomly.
@@ -98,12 +102,12 @@ Lets take a look at the optimizer `Adam`.
 adam = Adam(0.1, 0.2, 0.01)
 ```
 
-The first and second parameter describe the variables $$\beta_1$$ and $$\beta_2$$ from the corresponding formular from the site 
+The first and second parameter describe the variables ![equation](https://latex.codecogs.com/gif.latex?%5Cbeta_1) and ![equation](https://latex.codecogs.com/gif.latex?%5Cbeta_2) from the corresponding formular from the site 
 https://towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c.
-The third value correspons to the parameter $$\lambda$$ of the `L2-Regularization` 
+The third value correspons to the parameter ![equation](https://latex.codecogs.com/gif.latex?%5Clambda) of the `L2-Regularization` 
 (https://towardsdatascience.com/intuitions-on-l1-and-l2-regularisation-235f2db4c261).  
 If no optimizer was set, the normal gradient descent will be used.
 
 # Examples
 
-A complete example of MNIST data classification can be found here: https://gitlab2.informatik.uni-wuerzburg.de/hci/teaching/lectures/machine-learning/student-material/ws20/Team-01/neuralnet/-/tree/master/example
+A complete example of MNIST data classification can be found here: https://github.com/FabianSieper/neuralNet/tree/master/example
