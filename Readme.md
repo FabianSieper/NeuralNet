@@ -102,9 +102,9 @@ Lets take a look at the optimizer `Adam`.
 adam = Adam(0.1, 0.2, 0.01)
 ```
 
-The first and second parameter describe the variables ![equation](https://latex.codecogs.com/gif.latex?%5Cbeta_1) and ![equation](https://latex.codecogs.com/gif.latex?%5Cbeta_2) from the corresponding formular from the site 
+The first and second parameter describe the variables ![equation](https://latex.codecogs.com/png.latex?%5Cbeta_1) and ![equation](https://latex.codecogs.com/png.latex?%5Cbeta_2) from the corresponding formular from the site 
 https://towardsdatascience.com/adam-latest-trends-in-deep-learning-optimization-6be9a291375c.
-The third value correspons to the parameter ![equation](https://latex.codecogs.com/gif.latex?%5Clambda) of the `L2-Regularization` 
+The third value correspons to the parameter ![equation](https://latex.codecogs.com/png.latex?%5Clambda) of the `L2-Regularization` 
 (https://towardsdatascience.com/intuitions-on-l1-and-l2-regularisation-235f2db4c261).  
 If no optimizer was set, the normal gradient descent will be used.
 
